@@ -1,7 +1,8 @@
 version: '3'
 services:
-  mininet:
+ mininet:
     image: iwaseyusuke/mininet
+    # build: https://github.com/BlinfoldKing/docker-mininet.git
     tty: true
     network_mode: "bridge"
     privileged: true
@@ -10,4 +11,6 @@ services:
     volumes:
      - /tmp/.X11-unix:/tmp/.X11-unix
      - /lib/modules:/lib/modules
-     - ./script:/script/
+     - ./script:/script
+     - ./result:/result
+     - ./home:/home/
